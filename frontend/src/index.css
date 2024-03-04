@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+}
+body{
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  font-family: Gilroy;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url("/Fonts/Gilroy-Regular.ttf");
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8a0000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cf0000;
+}
