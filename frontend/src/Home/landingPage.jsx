@@ -7,9 +7,9 @@ const LandingPage = () => {
     useEffect(()=>{
         gsap.to('.txt h1 ', {
            y:1,
-           duration: 1,
+           duration: .8,
            ease:"power2",
-           stagger: 0.1,
+           stagger: 0.08,
         }),
         gsap.to('.landingmain', {
           height:'90vh',

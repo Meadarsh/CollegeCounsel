@@ -26,7 +26,7 @@ const SecondPage = () => {
         </div>
       </div>
       <div className="lg:mt-[10vh]">
-        <div className="flex justify-center border-t border-gray-400  items-center mt-[10vh] h-[10vh]">
+        <div className="flex justify-center border-t border-gray-300  items-center mt-[10vh] h-[10vh]">
           <h1 className="lg:text-[3vw] font-bold text-4xl text-center text-red-800">
             Browse Courses
           </h1>
@@ -36,7 +36,11 @@ const SecondPage = () => {
     <div key={index} className="button font-semibold lg:mt-0 mt-3 cursor-pointer h-12 border lg:hover:bg-red-800  lg:hover:text-white  border-red-800  px-5 flex items-center justify-center lg:text-xl rounded-full ">
         <p>{data}</p>
      </div>)) }
+    
     </div> 
+    <div className="h-[45vh]">
+  
+  </div>
         {/* {BrowseRentalList.map((data)=>(<div className="flex mt-12 lg:flex-row flex-col justify-between items-center lg:h-[50vh] h-[70vh]">
           <Swiper
           modules={[Autoplay]}

@@ -8,28 +8,27 @@ const WhyChooseus = () => {
           Why Choose Us?
         </h1>
       </div>
-      <div className="flex flex-col lg:flex-row px-14 gap-4 mt-10">
+      <div className="flex flex-col lg:flex-row lg:px-14 px-3 gap-4 mt-10">
         <div className="lg:w-1/3 w-full lg:text-lg p-2 rounded-md border border-red-700">
-          <h1 className="text-xl font-bold">Diverse Vibes</h1>
+          <h1 className="text-xl font-bold">Exceptional Faculty</h1>
           <p>
-            Feel the rich tapestry of India in our rentals that showcase its
-            varied culture. Our places embrace the traditions, colors, and
-            tastes that make India special.
+            Our renowned faculty comprises industry experts and experienced
+            educators dedicated to delivering top-notch education.
           </p>
         </div>
         <div className="lg:w-1/3 w-full lg:text-lg p-2 rounded-md border border-red-700">
-          <h1 className="text-xl font-bold">Easy Booking</h1>
+          <h1 className="text-xl font-bold">Flexible Learning Paths</h1>
           <p>
-            Our simple platform makes booking a breeze. Find, pick, and secure
-            your dream stay with just a few clicks - hassle-free and quick.
+            Enjoy the convenience of learning on your own schedule with our
+            flexible online platform designed for working professionals and busy
+            students.{" "}
           </p>
         </div>
         <div className="lg:w-1/3 w-full lg:text-lg p-2 rounded-md border border-red-700">
-          <h1 className="text-xl font-bold">Always Here for You</h1>
+          <h1 className="text-xl font-bold">Cutting-Edge Curriculum</h1>
           <p>
-            Our helpful support team is ready 24/7. Whether you have questions
-            or need assistance in an emergency, we're here to ensure your stay
-            is unforgettable.
+            Stay ahead with a curriculum that evolves with industry trends,
+            providing you with relevant skills for today's dynamic job market.
           </p>
         </div>
       </div>
