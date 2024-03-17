@@ -1,11 +1,13 @@
+import AccordionExpandIcon from "../../Components/Accordian";
+import { AccordionData } from "../../Data/data";
 import React from "react";
 
 const WhyChooseus = () => {
   return (
     <>
-      <div className="flex justify-center items-center mt-[10vh] h-[10vh]">
-        <h1 className="lg:text-[3vw] font-bold text-4xl text-center text-red-800">
-          Why Choose Us?
+      <div className="flex justify-center items-center mt-[7vh] h-[4vh] lg:mt-[15vh] lg:h-[10vh]">
+        <h1 className="lg:text-[2.5vw] font-bold text-4xl text-center text-red-800">
+          Explore Us
         </h1>
       </div>
       <div className="flex flex-col lg:flex-row lg:px-14 px-3 gap-4 mt-10">
@@ -32,6 +34,9 @@ const WhyChooseus = () => {
           </p>
         </div>
       </div>
+     <div className="lg:w-[100%] mt-[5vh] flex justify-center">
+     <AccordionExpandIcon data={AccordionData}/>
+     </div>
     </>
   );
 };

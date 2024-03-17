@@ -11,23 +11,31 @@ body{
   position: relative;
   font-family: Gilroy;
 }
-
+body {
+  -webkit-touch-callout: none; /* Disable iOS callouts */
+  -webkit-user-select: none; /* Disable text selection */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 @font-face {
   font-family: Gilroy;
   src: url("/Fonts/Gilroy-Regular.ttf");
 }
 ::-webkit-scrollbar {
   width: 10px;
+
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background-color: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #8a0000;
+ 
 }
 
 /* Handle on hover */

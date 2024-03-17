@@ -25,7 +25,7 @@ const NavBar = () => {
      <button className='text-white w-24 font-semibold cursor-pointer rounded-full px-3 py-1 bg-red-800 lg:hover:bg-red-500'>Courses</button>
      <button className='text-white w-24 font-semibold cursor-pointer rounded-full px-3 py-1 bg-red-800 lg:hover:bg-red-500'>College</button>
     </div>
-    <CgDetailsMore className='text-4xl lg:hidden'/>
+    <CgDetailsMore className='text-4xl text-white lg:hidden'/>
    </div>
   )
 }
