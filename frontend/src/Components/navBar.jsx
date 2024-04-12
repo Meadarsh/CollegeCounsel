@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { CgDetailsMore } from "react-icons/cg";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -19,11 +20,12 @@ const NavBar = () => {
   })
   return (
    <div className=' mainNav w-[100vw] left-0 lg:h-20 h-16 z-50 fixed top-0 flex justify-between items-center lg:px-10 px-8'>
-    <div>Logo</div>
-    <div className='lg:flex gap-5 hidden  w-[20%] '>
-     <button className='text-white w-24 font-semibold cursor-pointer rounded-full px-3 py-1 bg-red-800 lg:hover:bg-red-500'>Home</button>
-     <button className='text-white w-24 font-semibold cursor-pointer rounded-full px-3 py-1 bg-red-800 lg:hover:bg-red-500'>Courses</button>
-     <button className='text-white w-24 font-semibold cursor-pointer rounded-full px-3 py-1 bg-red-800 lg:hover:bg-red-500'>College</button>
+    <div><img className='h-12 rounded-full' src='/logo/logo.png' alt="N/A" /></div>
+    <div className='lg:flex gap-5 hidden  min-w-[20%] '>
+    <Link to='/'><button className='text-white w-24 font-semibold cursor-pointer rounded-full px-3 py-1 bg-red-800 lg:hover:bg-red-500'>Home</button></Link>
+     {/* <button className='text-white w-24 font-semibold cursor-pointer rounded-full px-3 py-1 bg-red-800 lg:hover:bg-red-500'>Courses</button> */}
+    <Link to='/blogs'> <button className='text-white w-24 font-semibold cursor-pointer rounded-full px-3 py-1 bg-red-800 lg:hover:bg-red-500'>Blogs</button></Link>
+     {/* <button className='text-white w-24 font-semibold cursor-pointer rounded-full px-3 py-1 bg-red-800 lg:hover:bg-red-500'>College</button> */}
     </div>
     <CgDetailsMore className='text-4xl text-white lg:hidden'/>
    </div>
