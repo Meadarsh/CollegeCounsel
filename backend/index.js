@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload());
 app.use(cookieParser())
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://ccapi.collegecounsel.co.in',
     credentials: true,
   }));
   
