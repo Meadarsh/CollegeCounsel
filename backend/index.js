@@ -1,5 +1,4 @@
 import  express  from "express";
-import  mongoose  from "mongoose";
 import { configDotenv } from "dotenv";
 import cors from 'cors'
 import connectDB from "./src/db/index.js";
@@ -14,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload());
 app.use(cookieParser())
 app.use(cors({
-    origin:'https://ccapi.collegecounsel.co.in',
+    origin:'https://collegecounsel.co.in',
     credentials: true,
   }));
   
