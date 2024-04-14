@@ -38,9 +38,9 @@ const Blogs = () => {
     <>
      
       <div className="w-full h-full relative pt-20">
-      {expandBlog&&<div className="expand absolute left-0 flex flex-col lg:flex-row right-0 w-full h-full p-2 lg:p-10 gap-10 bg-gray-200 z-10" >
+      {expandBlog&&<div className="expand fixed left-0 flex flex-col lg:flex-row items-center right-0 w-full h-full p-2 lg:p-10 gap-10 bg-gray-200 z-30" >
         <img className="lg:w-1/3 object-cover  rounded-3xl" src={blogs[Index]?.path} alt="N/a" />
-        <div className="lg:w-2/3 ">
+        <div className="lg:w-2/3 overflow-y-auto ">
           <h1 className="text-3xl my-3 font-semibold">{blogs[Index]?.title} </h1>
           <p>{blogs[Index]?.content} </p>
         </div>

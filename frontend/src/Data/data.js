@@ -31,14 +31,12 @@ export const homePageCourcesList = [
 export const ugCourseData = {
   BCom: [
     "Manipal University Sikkim",
-    "Manipal University Jaipur",
     "GLA University",
     "Lovely Professional University",
     "Jain University",
   ],
   BA: [
     "Manipal University Sikkim",
-    "Manipal University Jaipur",
     "Uttaranchal University",
     "Lovely Professional University",
   ],
@@ -48,24 +46,24 @@ export const ugCourseData = {
     "GLA University",
     "Lovely Professional University",
     "Jain University",
+    "Vignan University",
   ],
   BCA: [
     "Manipal University Jaipur",
     "Uttaranchal University",
     "GLA University",
     "Lovely Professional University",
+    "Vignan University",
   ],
 };
 export const pgCourseData = {
   MCom: [
     "Manipal University Sikkim",
-    "Manipal University Jaipur",
     "Lovely Professional University",
     "Jain University",
   ],
   MA: [
     "Manipal University Sikkim",
-    "Manipal University Jaipur",
     "Lovely Professional University",
   ],
   MBA: [
@@ -73,11 +71,14 @@ export const pgCourseData = {
     "GLA University",
     "Lovely Professional University",
     "Jain University",
+    "Uttaranchal University",
+    "Vignan University",
   ],
   MCA: [
     "Manipal University Sikkim",
-    "Manipal University Jaipur",
+    "Jain University",
     "Uttaranchal University",
+    "Vignan University",
     "GLA University",
     "Lovely Professional University",
   ],

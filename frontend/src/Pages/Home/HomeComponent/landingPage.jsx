@@ -11,16 +11,10 @@ const LandingPage = () => {
       duration: 0.8,
       ease: "power2",
       stagger: 0.08,
-    }),
-      gsap.to(".landingmain", {
-        height: "90vh",
-        delay: 1.5,
-        duration: 1.2,
-        ease: "power2",
-      });
+    })
   }, []);
   return (
-    <div className="landingmain h-[100vh] overflow-hidden relative w-[100vw]">
+    <div className=" h-[100vh] overflow-hidden relative w-[100vw]">
       <img
         className=" brightness-90 w-full h-full object-cover"
         src="home.jpg"

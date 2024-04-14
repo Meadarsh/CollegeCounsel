@@ -4,6 +4,7 @@ import SecondPage from './HomeComponent/secondPage'
 import WhyChooseus from './HomeComponent/whyChooseus'
 import ContactUs from './HomeComponent/contactUs'
 import CollegeBoard from './HomeComponent/CollegeBoard'
+import Footer from '../../Components/Footer'
 
 const Home = () => {
   return (
@@ -12,7 +13,8 @@ const Home = () => {
     <SecondPage/>
     <CollegeBoard/>
     <WhyChooseus/>
-    <ContactUs/>
+    {/* <ContactUs/> */}
+    <Footer/>
     </>
   )
 }
