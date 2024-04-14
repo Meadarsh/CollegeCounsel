@@ -23,7 +23,8 @@ const Footer = () => {
     </div>
     <div className='logo pb-4 lg:text-xl text-sm lg:w-1/3 lg:border-l lg:h-[80%] flex flex-col items-center lg:items-start lg:justify-center pl-3'>
    
-        Phone no: +916392832171
+        Phone no: +916392832171 <br/>
+        Email: email.collegecounsel@gmail.com
     </div>
 </div>
 <p className='text-center text-white bg-red-950 px-3 pb-5'>all rights reserved. © copyright 2024 collegecounsel.co.in </p>
