@@ -77,8 +77,9 @@ const ApplyForm = () => {
     });
     console.log(Send.ok);
     if(Send.ok){
-      alert('Submited successfully.');
       setFormData(InitialState)
+      alert('Submited successfully.');
+      
     }
     else{
       alert('Unable to submit.');
