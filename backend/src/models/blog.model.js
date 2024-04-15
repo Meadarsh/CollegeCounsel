@@ -10,4 +10,4 @@ const BlogModel= new Schema({
     public_id:String,
 })
 
-export const Blog = model("File",BlogModel)
+export const Blog = model("Blogs",BlogModel)

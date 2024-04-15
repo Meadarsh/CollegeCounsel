@@ -34,11 +34,13 @@ export const ugCourseData = {
     "GLA University",
     "Lovely Professional University",
     "Jain University",
+    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
   ],
   BA: [
     "Manipal University Sikkim",
     "Uttaranchal University",
     "Lovely Professional University",
+    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
   ],
   BBA: [
     "Manipal University Jaipur",
@@ -47,6 +49,7 @@ export const ugCourseData = {
     "Lovely Professional University",
     "Jain University",
     "Vignan University",
+    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
   ],
   BCA: [
     "Manipal University Jaipur",
@@ -54,6 +57,7 @@ export const ugCourseData = {
     "GLA University",
     "Lovely Professional University",
     "Vignan University",
+    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
   ],
 };
 export const pgCourseData = {
@@ -61,10 +65,12 @@ export const pgCourseData = {
     "Manipal University Sikkim",
     "Lovely Professional University",
     "Jain University",
+    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
   ],
   MA: [
     "Manipal University Sikkim",
     "Lovely Professional University",
+    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
   ],
   MBA: [
     "Manipal University Jaipur",
@@ -73,6 +79,7 @@ export const pgCourseData = {
     "Jain University",
     "Uttaranchal University",
     "Vignan University",
+    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
   ],
   MCA: [
     "Manipal University Sikkim",
@@ -81,6 +88,7 @@ export const pgCourseData = {
     "Vignan University",
     "GLA University",
     "Lovely Professional University",
+    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
   ],
 };
 
@@ -98,3 +106,35 @@ export const pgCourseData = {
     Answer:'If you are using the CollegeCounsel platform as a student, all of our services will be 100% free for you! Yes, we do not charge learners for any kind of assistance or career-guiding services & post-admission benefits. '
   },
 ]
+
+export const indianStates = [
+  "Other",
+  "Andhra Pradesh",
+  "Arunachal Pradesh",
+  "Assam",
+  "Bihar",
+  "Chhattisgarh",
+  "Goa",
+  "Gujarat",
+  "Haryana",
+  "Himachal Pradesh",
+  "Jharkhand",
+  "Karnataka",
+  "Kerala",
+  "Madhya Pradesh",
+  "Maharashtra",
+  "Manipur",
+  "Meghalaya",
+  "Mizoram",
+  "Nagaland",
+  "Odisha",
+  "Punjab",
+  "Rajasthan",
+  "Sikkim",
+  "Tamil Nadu",
+  "Telangana",
+  "Tripura",
+  "Uttar Pradesh",
+  "Uttarakhand",
+  "West Bengal"
+];

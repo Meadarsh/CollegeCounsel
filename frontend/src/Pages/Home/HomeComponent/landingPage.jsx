@@ -42,25 +42,7 @@ const LandingPage = () => {
           <h1 className="translate-y-full leading-none">L</h1>
         </div>
       </div>
-      <div className="absolute top-[80%] w-[100vw] overflow-hidden flex  h-10 lg:h-20 items-center">
-        <div className=" bg-white flex items-center px-2 lg:px-3 h-10 lg:h-20">
-          <h1 className="lg:text-3xl text-nowrap font-bold">We Offers</h1>
-        </div>
-        <div className=" h-full  relative w-full">
-          <div className="bg-gradient-to-r absolute top-0 z-10 from-white to-transparent w-6 lg:w-16 h-full">
-    
-          </div>
-          <div id="loop" className="Moving-text-animation lg:text-3xl  text-white overflow-hidden items-center w-full h-full flex">             
-               <div className="marquee-text whitespace-nowrap text-white items-center flex gap-5 w-full"> 
-               {coursesName.map((e)=>(<p>{e} <span className=" text-lg">⚪</span> </p>)) }
-               {/* {coursesName.map((e)=>(<p>{e} <span className=" text-lg">⚪</span> </p>)) }
-               {coursesName.map((e)=>(<p>{e} <span className=" text-lg">⚪</span> </p>)) }
-               {coursesName.map((e)=>(<p>{e} <span className=" text-lg">⚪</span> </p>)) } */}
-               </div>
-              
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { loginUser } from "../controllers/user.controller.js";
 import { auth } from "../middleware/auth.middleware.js";
 import { registerUser } from "../controllers/user.controller.js";
 import { PostBlog, getBlogs } from "../controllers/blog.controller.js";
+import { ApplyForm } from "../controllers/apply.controller.js";
 
 
 const router =Router()
@@ -11,6 +12,7 @@ router.route("/").get(async(req,res)=>{
 })
 router.route("/register").post(registerUser)
 router.route("/login").post(loginUser)
+router.route("/apply").post(ApplyForm)
 router.route("/blogs").get(getBlogs);
 
 //  Secure routes  

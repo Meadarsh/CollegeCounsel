@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(fileUpload());
 app.use(cookieParser())
 app.use(cors({
-    origin:'https://collegecounsel.co.in',
+    origin:process.env.ORIGIN,
     credentials: true,
   }));
   

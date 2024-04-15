@@ -1,11 +1,13 @@
 import { useState, lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
 import NavBar from "./Components/navBar";
 import Home from "./Pages/Home/home";
 import Blogs from "./Pages/Blogs/blogs";
 import PostBlogs from "./ProtectedPages/postBlogs";
 import ThemeProvider from 'src/theme';
 import DashboardLayout from 'src/layouts/dashboard'; 
+import Applyside from "./Components/Applyside";
+import ApplyForm from "./Pages/Apply/ApplyForm";
 
 
 export const IndexPage = lazy(() => import('src/pages/app'));
@@ -23,10 +25,11 @@ function App() {
       <Router>
         <>
           <NavBar />
-          
+        
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="/apply" element={<ApplyForm />} />
               <Route path="/post-blogs" element={<PostBlogs />} />
               <Route
                 path="/admin/*"

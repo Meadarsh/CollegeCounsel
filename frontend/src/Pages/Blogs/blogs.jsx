@@ -10,6 +10,8 @@ import PostCard from "../../ProtectedPages/Admin/sections/blog/post-card";
 import { posts } from "../../ProtectedPages/Admin/_mock/blog";
 import PostSearch from "../../ProtectedPages/Admin/sections/blog/post-search";
 import PostSort from "../../ProtectedPages/Admin/sections/blog/post-sort";
+import Applyside from "../../Components/Applyside";
+import { Link } from "react-router-dom";
 const Blogs = () => {
   
   const [blogs, setBlogs] = useState([1]);
@@ -36,7 +38,7 @@ const Blogs = () => {
  
   return (
     <>
-     
+     <Link to='apply'><Applyside/></Link>
       <div className="w-full h-full relative pt-20">
       {expandBlog&&<div className="expand fixed left-0 flex flex-col lg:flex-row items-center right-0 w-full h-full p-2 lg:p-10 gap-10 bg-gray-200 z-30" >
         <img className="lg:w-1/3 object-cover  rounded-3xl" src={blogs[Index]?.path} alt="N/a" />

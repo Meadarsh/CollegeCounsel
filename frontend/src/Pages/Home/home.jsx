@@ -5,11 +5,15 @@ import WhyChooseus from './HomeComponent/whyChooseus'
 import ContactUs from './HomeComponent/contactUs'
 import CollegeBoard from './HomeComponent/CollegeBoard'
 import Footer from '../../Components/Footer'
+import LandingCrausel from './HomeComponent/landingCrausel'
+import Applyside from '../../Components/Applyside'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
     <>
-    <LandingPage/>
+    <Link to='apply'><Applyside/></Link>
+    <LandingCrausel/>
     <SecondPage/>
     <CollegeBoard/>
     <WhyChooseus/>
