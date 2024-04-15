@@ -25,7 +25,16 @@ const ApplyForm = () => {
     state: false,
     country: false
   });
-
+ const InitialState =
+  {
+    name: '',
+    email: '',
+    phoneNumber: '',
+    dob: null,
+    state: null,
+    country: ''
+  }
+ 
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
@@ -69,6 +78,7 @@ const ApplyForm = () => {
     console.log(Send.ok);
     if(Send.ok){
       alert('Submited successfully.');
+      setFormData(InitialState)
     }
     else{
       alert('Unable to submit.');
