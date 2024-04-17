@@ -34,13 +34,13 @@ export const ugCourseData = {
     "GLA University",
     "Lovely Professional University",
     "Jain University",
-    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
+    "Amity University","	Amrita University",	"Shoolini	University","Chandigarh University",	"DY Patil University","UPES University",
   ],
   BA: [
     "Manipal University Sikkim",
     "Uttaranchal University",
     "Lovely Professional University",
-    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
+    "Amity University","	Amrita University",	"Shoolini	University","Chandigarh University",	"DY Patil University","UPES University",
   ],
   BBA: [
     "Manipal University Jaipur",
@@ -49,7 +49,7 @@ export const ugCourseData = {
     "Lovely Professional University",
     "Jain University",
     "Vignan University",
-    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
+    "Amity University","	Amrita University",	"Shoolini	University","Chandigarh University",	"DY Patil University","UPES University",
   ],
   BCA: [
     "Manipal University Jaipur",
@@ -57,7 +57,7 @@ export const ugCourseData = {
     "GLA University",
     "Lovely Professional University",
     "Vignan University",
-    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
+    "Amity University","	Amrita University",	"Shoolini	University","Chandigarh University",	"DY Patil University","UPES University",
   ],
 };
 export const pgCourseData = {
@@ -65,12 +65,12 @@ export const pgCourseData = {
     "Manipal University Sikkim",
     "Lovely Professional University",
     "Jain University",
-    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
+    "Amity University","	Amrita University",	"Shoolini University	","Chandigarh University",	"DY Patil University","UPES University",
   ],
   MA: [
     "Manipal University Sikkim",
     "Lovely Professional University",
-    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
+    "Amity University","	Amrita University",	"Shoolini	University","Chandigarh University",	"DY Patil University","UPES University",
   ],
   MBA: [
     "Manipal University Jaipur",
@@ -79,7 +79,7 @@ export const pgCourseData = {
     "Jain University",
     "Uttaranchal University",
     "Vignan University",
-    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
+    "Amity University","	Amrita University",	"Shoolini	University","Chandigarh University",	"DY Patil University","UPES University",
   ],
   MCA: [
     "Manipal University Sikkim",
@@ -88,7 +88,16 @@ export const pgCourseData = {
     "Vignan University",
     "GLA University",
     "Lovely Professional University",
-    "Amity","	Amrita",	"Shoolini	","Chandigarh",	"DY Patil","UPES",
+    "Amity University","	Amrita University",	"Shoolini	University","Chandigarh University",	"DY Patil University","UPES University",
+  ],
+  MSc: [
+    "Manipal University Sikkim",
+    "Jain University",
+    "Uttaranchal University",
+    "Vignan University",
+    "GLA University",
+    "Lovely Professional University",
+    "Amity University","	Amrita University",	"Shoolini	University","Chandigarh University",	"DY Patil University","UPES University",
   ],
 };
 
