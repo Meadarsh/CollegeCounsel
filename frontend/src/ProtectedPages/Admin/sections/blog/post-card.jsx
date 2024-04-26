@@ -49,18 +49,21 @@ export default function PostCard({ post}) {
     </Typography></Link>
   )
   const renderContent = (
-    <Link
+    <Link to={`/blog/${post._id}`}>
+    <Typography
       color="inherit"
       variant="p"
       sx={{
         height: 30,
+        width:'90%',
         overflow: 'hidden',
         WebkitLineClamp: 2,
         display: '-webkit-box',
         WebkitBoxOrient: 'vertical',
       }}
     >
-      {subtitle}
+     {subtitle}
+     </Typography>
     </Link>
   );
 

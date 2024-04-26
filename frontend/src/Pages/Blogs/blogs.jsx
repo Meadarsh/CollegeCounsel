@@ -64,11 +64,11 @@ const Blogs = () => {
 
           <Grid container spacing={3}>
             {(shortBlog==='oldest')&&blogs.map((post, index) => (
-             <PostCard key={post._id} post={post} index={index} />
+             <PostCard key={post.id} post={post} index={index} />
             ))}
 
             {(shortBlog==='latest')&& [...blogs].reverse().map((post, index) => (
-             <PostCard key={post._id} post={post} index={index} />
+             <PostCard key={post.id} post={post} index={index} />
             ))}
           </Grid>
         </Container>
