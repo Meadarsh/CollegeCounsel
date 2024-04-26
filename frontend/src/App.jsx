@@ -8,6 +8,7 @@ import ThemeProvider from 'src/theme';
 import DashboardLayout from 'src/layouts/dashboard'; 
 import Applyside from "./Components/Applyside";
 import ApplyForm from "./Pages/Apply/ApplyForm";
+import Blogpage from "./Pages/Blogs/blogpage";
 
 
 export const IndexPage = lazy(() => import('src/pages/app'));
@@ -30,6 +31,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/apply" element={<ApplyForm />} />
+              <Route path="/blog/:id" element={<Blogpage />} />
               <Route path="/post-blogs" element={<PostBlogs />} />
               <Route
                 path="/admin/*"

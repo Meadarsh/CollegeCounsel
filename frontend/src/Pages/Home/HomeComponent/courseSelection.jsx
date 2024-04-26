@@ -58,9 +58,9 @@ const OfferingCollegesLIst = ({ college }) => {
     <div className="flex p-2 pt-7 flex-wrap gap-3 justify-center">
       {college?.map((college) => (
         <div className="flex border w-32 lg:w-40 rounded-lg text-nowrap overflow-hidden flex-col  justify-center p-2 border-red-800">
-          <FaUniversity className="m-auto text-2xl lg:text-4xl" />
+          <img className="h-10" src={college.img} alt="" />
           <p className="text-ellipsis w-[100%] overflow-hidden whitespace-nowrap">
-            {college}
+            {college.name}
           </p>
         </div>
       ))}

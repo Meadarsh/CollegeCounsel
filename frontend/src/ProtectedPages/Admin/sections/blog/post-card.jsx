@@ -1,88 +1,66 @@
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
-import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
-import { alpha } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-
 import { fDate } from 'src/utils/format-time';
-import { fShortenNumber } from 'src/utils/format-number';
-
-import Iconify from 'src/components/iconify';
 import SvgColor from 'src/components/svg-color';
 
 // ----------------------------------------------------------------------
 
-export default function PostCard({ post,ExpandBlog, index }) {
-  const { path, title,content, upload_time } = post;
+export default function PostCard({ post}) {
+  const {_id, path, title,subtitle, upload_time } = post;
 
-  const latestPostLarge = index === 0;
-
-  const latestPost = index === 1 || index === 2;
-
-  // const renderAvatar = (
-  //   <Avatar
-  //     alt={author.name}
-  //     src={author.avatarUrl}
-  //     sx={{
-  //       zIndex: 9,
-  //       width: 32,
-  //       height: 32,
-  //       position: 'absolute',
-  //       left: (theme) => theme.spacing(3),
-  //       bottom: (theme) => theme.spacing(-2),
-  //       ...((latestPostLarge || latestPost) && {
-  //         zIndex: 9,
-  //         top: 24,
-  //         left: 24,
-  //         width: 40,
-  //         height: 40,
-  //       }),
-  //     }}
-  //   />
-  // );
+  const renderAvatar = (
+    <Avatar
+      alt={'CC'}
+      src={'/favicon/cc.png'}
+      sx={{
+        zIndex: 9,
+        width: 32,
+        height: 32,
+        position: 'absolute',
+        left: (theme) => theme.spacing(3),
+        bottom: (theme) => theme.spacing(-2),
+      
+      }}
+    />
+  );
 
   const renderTitle = (
-    <Link
+    <Link className="w-full" to={`/blog/${post._id}`}><Typography
       color="inherit"
       variant="subtitle2"
       underline="hover"
       sx={{
-        height: 44,
+        height:20,
         overflow: 'hidden',
+        textDecoration: 'underline',
         WebkitLineClamp: 2,
         display: '-webkit-box',
         WebkitBoxOrient: 'vertical',
-        ...(latestPostLarge && { typography: 'h5', height: 60 }),
-        ...((latestPostLarge || latestPost) && {
-          color: 'common.white',
-        }),
+        
       }}
     >
       {title}
-    </Link>
+    </Typography></Link>
   )
   const renderContent = (
     <Link
       color="inherit"
       variant="p"
       sx={{
-        height: 44,
+        height: 30,
         overflow: 'hidden',
         WebkitLineClamp: 2,
         display: '-webkit-box',
         WebkitBoxOrient: 'vertical',
-        ...(latestPostLarge && { typography: 'p' }),
-        ...((latestPostLarge || latestPost) && {
-          color: 'common.white',
-        }),
       }}
     >
-      {content}
+      {subtitle}
     </Link>
   );
 
@@ -120,7 +98,7 @@ export default function PostCard({ post,ExpandBlog, index }) {
   // );
 
   const renderCover = (
-    <Box
+    <Link className="w-full" to={`/blog/${post._id}`}> <Box
       component="img"
       alt={title}
       src={path}
@@ -132,6 +110,7 @@ export default function PostCard({ post,ExpandBlog, index }) {
         position: 'absolute',
       }}
     />
+    </Link>
   );
 
   const renderDate = (
@@ -141,10 +120,7 @@ export default function PostCard({ post,ExpandBlog, index }) {
       sx={{
         mb: 2,
         color: 'text.disabled',
-        ...((latestPostLarge || latestPost) && {
-          opacity: 0.48,
-          color: 'common.white',
-        }),
+       
       }}
     >
       {fDate(upload_time)}
@@ -162,40 +138,24 @@ export default function PostCard({ post,ExpandBlog, index }) {
         bottom: -15,
         position: 'absolute',
         color: 'background.paper',
-        ...((latestPostLarge || latestPost) && { display: 'none' }),
+        
       }}
     />
   );
 
   return (
-    <Grid xs={12} sm={latestPostLarge ? 12 : 6} md={latestPostLarge ? 6 : 3}>
-      <Card onClick={() => ExpandBlog(index)}>
+    <Grid xs={12} sm={ 6} md={ 3}>
+      <Card>
         <Box
           sx={{
             position: 'relative',
             pt: 'calc(100% * 3 / 4)',
-            ...((latestPostLarge || latestPost) && {
-              pt: 'calc(100% * 4 / 3)',
-              '&:after': {
-                top: 0,
-                content: "''",
-                width: '100%',
-                height: '100%',
-                position: 'absolute',
-                bgcolor: (theme) => alpha(theme.palette.grey[900], 0.72),
-              },
-            }),
-            ...(latestPostLarge && {
-              pt: {
-                xs: 'calc(100% * 4 / 3)',
-                sm: 'calc(100% * 3 / 4.66)',
-              },
-            }),
+            
           }}
         >
           {renderShape}
 
-          {/* {renderAvatar} */}
+          {renderAvatar}
 
           {renderCover}
         </Box>
@@ -203,11 +163,6 @@ export default function PostCard({ post,ExpandBlog, index }) {
         <Box
           sx={{
             p: (theme) => theme.spacing(4, 3, 3, 3),
-            ...((latestPostLarge || latestPost) && {
-              width: 1,
-              bottom: 0,
-              position: 'absolute',
-            }),
           }}
         >
           {renderDate}

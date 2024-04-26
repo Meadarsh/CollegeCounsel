@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const PostBlogs = () => {
   const [formD, setFormD] = useState({
     title: '',
+    subtitle: '',
     content: '',
     images: null
   });
@@ -25,6 +26,7 @@ const PostBlogs = () => {
   const handleSubmit = async () => {
     const formData = new FormData();
     formData.append('title', formD.title);
+    formData.append('subtitle', formD.subtitle);
     formData.append('content', formD.content);
     formData.append('images', formD.images);
     try {
@@ -60,8 +62,17 @@ const PostBlogs = () => {
             value={formD.title}
             onChange={handleChange}
           />
+          <input
+            type="text"
+            className=' h-8 border rounded-xl text-lg pl-2 focus:outline-none'
+            name="subtitle"
+            id="subtitle"
+            placeholder="Subtitle"
+            value={formD.subtitle}
+            onChange={handleChange}
+          />
           <textarea
-            className='focus:outline-none  border rounded-xl overflow-y-auto pl-2'
+            className='focus:outline-none  border rounded-lg overflow-y-auto pl-2'
             name="content"
             id="content"
             cols={30}

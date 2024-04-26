@@ -10,7 +10,7 @@ cloudinary.config({
 
 export const PostBlog = asyncHandler(async (req, res) => {
   try {
-    const { title, content } = req.body;
+    const { title, content,subtitle } = req.body;
     const imageFile = req?.files?.images;
     if (req.files?.images) {
       const fileBuffer = Buffer.from(imageFile.data);
@@ -24,6 +24,7 @@ export const PostBlog = asyncHandler(async (req, res) => {
         public_id: result.public_id,
         title: title,
         content: content,
+        subtitle:subtitle,
         path: result.secure_url,
       });
       if (!create) {
@@ -42,6 +43,18 @@ export const getBlogs = asyncHandler(async (req, res) => {
   try {
   const blogs = await Blog.find();
   res.send(blogs);
+  } catch (error) {
+    res.send({ status: false, message: "Internal server error" });
+  }
+});
+export const getBlogById = asyncHandler(async (req, res) => {
+  try {
+    const { id } = req.params;
+    const blog = await Blog.findById(id);
+    if(!blog) {
+      return res.send({status: false, message: "Blog not found"});
+    }
+    res.send(blog);
   } catch (error) {
     res.send({ status: false, message: "Internal server error" });
   }
