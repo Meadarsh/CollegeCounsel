@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import Loader from '../Components/Loader';
 
 const PostBlogs = () => {
+  const [loading,setLoading]=useState(false)
   const [formD, setFormD] = useState({
     title: '',
     subtitle: '',
@@ -24,12 +26,17 @@ const PostBlogs = () => {
   };
 
   const handleSubmit = async () => {
+    if(!formD.images){
+      alert("Please select an image");
+      return;
+    }
     const formData = new FormData();
     formData.append('title', formD.title);
     formData.append('subtitle', formD.subtitle);
     formData.append('content', formD.content);
     formData.append('images', formD.images);
     try {
+      setLoading(true)
       const response = await fetch(import.meta.env.VITE_BASE_URL+`/post_blog`, {
         method: 'POST',
         body: formData,
@@ -37,6 +44,7 @@ const PostBlogs = () => {
         //   'Content-Type': 'multipart/form-data'
         // }
       });
+      setLoading(false)
       if (response.ok) {
         alert('Blog post successful');
       } else {
@@ -93,7 +101,7 @@ const PostBlogs = () => {
           className="submit w-full h-12 bg-red-800 rounded-xl hover:bg-red-600 flex items-center justify-center text-xl text-white"
           onClick={handleSubmit}
         >
-          Submit
+         {loading?<Loader/>:'Submit'}
         </div>
       </div>
     </div>
