@@ -4,9 +4,10 @@ const ApplyModel= new Schema({
     name:String,
     email: String, 
     PhoneNumber:String,
-    dob: String,   
+    city: String,   
     state:String, 
     country:String,
+    course:String
  }, { timestamps: true },
 )
 

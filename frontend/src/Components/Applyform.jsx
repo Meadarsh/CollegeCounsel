@@ -20,7 +20,8 @@ const ApplyformComp = ({handleClose}) => {
         phoneNumber: '',
         city: '',
         state: null,
-        country: ''
+        country: '',
+        course: "",
       });
     
       const [errors, setErrors] = useState({
@@ -29,7 +30,8 @@ const ApplyformComp = ({handleClose}) => {
         phoneNumber: false,
         city: false,
         state: false,
-        country: false
+        country: false,
+        course:false
       });
      const InitialState =
       {
@@ -38,7 +40,8 @@ const ApplyformComp = ({handleClose}) => {
         phoneNumber: '',
         city: '',
         state: null,
-        country: ''
+        country: '',
+        course:''
       }
      
       const handleChange = (e) => {
@@ -47,10 +50,6 @@ const ApplyformComp = ({handleClose}) => {
         setErrors({ ...errors, [id]: value.trim() === '' });
       };
     
-      const handleDateChange = (date) => {
-        setFormData({ ...formData, dob: date });
-        setErrors({ ...errors, dob: !date });
-      };
     
       const handleStateChange = (_, value) => {
         setFormData({ ...formData, state: value });
@@ -95,7 +94,7 @@ const ApplyformComp = ({handleClose}) => {
   return (
     <div className='lg:w-2/3 mt-32 z-50 lg:mt-20 lg:h-[80vh] flex rounded-xl overflow-hidden shadow-xl'>
    <div className='w-2/5 hidden lg:flex justify-center'>
-      <img className='h-full mx-auto object-cover' src="/image/formImg.webp" alt="" />
+      <img className='h-full mx-auto object-cover' src="/image/formImg.png" alt="" />
     </div>
     <div className="lg:w-3/5 w-full relative h-full items-center justify-center flex flex-col gap-6 p-5 lg:p-10 bg-slate-100  ">
     {location.pathname=='/'&&<RxCross1 onClick={handleClose} className=' text-2xl absolute right-8 top-8'/>}
@@ -105,7 +104,7 @@ const ApplyformComp = ({handleClose}) => {
      
       <form className='w-full mt-4 lg:mt-10 flex flex-col gap-3' onSubmit={handleSubmit}>
       
-        <p className=' text-left text-red-600 pl-10'>*Fill all the fields</p>
+
       
         <div className='flex w-[100%] lg:flex-row flex-col gap-3'>
           <TextField
@@ -160,11 +159,11 @@ const ApplyformComp = ({handleClose}) => {
             id="state"
             options={indianStates}
             sx={{ width: '100%' }}
-            renderInput={(params) => <TextField {...params} label="State" />}
+            renderInput={(params) => <TextField  error={errors.state}
+            helperText={errors.state && "State is required"} {...params} label="State" />}
             value={formData.state}
             onChange={handleStateChange}
-            error={errors.state}
-            helperText={errors.state && "State is required"}
+           
           />
           <TextField
             sx={{ width: '100%' }}
@@ -177,6 +176,16 @@ const ApplyformComp = ({handleClose}) => {
             helperText={errors.country && "Country is required"}
           />
         </div>
+        <TextField
+            sx={{ width: '100%' }}
+            id="course"
+            label="Course name"
+            variant="outlined"
+            value={formData.course}
+            onChange={handleChange}
+            error={errors.course}
+            helperText={errors.course && "Course is required"}
+          />
         <div className='w-full mt-4'>
           <Button sx={{ width: '100%', height: 50 }} variant="contained" type="submit">Apply for free</Button>
         </div>
