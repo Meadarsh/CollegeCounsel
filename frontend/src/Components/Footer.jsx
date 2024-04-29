@@ -12,12 +12,12 @@ const Footer = () => {
     <div className='logo lg:w-1/3 lg:text-2xl lg:border-l lg:h-[80%] gap-4 flex flex-col items-center lg:items-start lg:justify-center pl-3'>
         <h1>Connect with us</h1>
         <div className='flex text-white text-3xl gap-3'>
-           <a href="https://wa.me/+916392832171">
+           <a href="https://wa.me/+916392832171" target="_blank">
            <FaWhatsapp/>
            </a>
-            {/* <FaFacebook/>
-            <FaInstagram/>
-            <RiTwitterXLine/> */}
+            <FaFacebook/>
+            <a href="https://www.instagram.com/college_counsel/" target="_blank"><FaInstagram/></a>
+            <RiTwitterXLine/>
         </div>
 
     </div>
