@@ -37,7 +37,7 @@ const PostBlogs = () => {
     formData.append('images', formD.images);
     try {
       setLoading(true)
-      const response = await fetch(import.meta.env.VITE_BASE_URL+`/post_blog`, {
+      const response = await fetch(`/post_blog`, {
         method: 'POST',
         body: formData,
         // headers: {

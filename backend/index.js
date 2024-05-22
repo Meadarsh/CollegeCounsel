@@ -22,6 +22,6 @@ app.use(cors({
 
 import router from './src/routes/routes.js'
 app.use(router)
-
-app.listen( process.env.PORT,  () => console.log("Server is running on port 3000"));
+const PORT =process.env.PORT
+app.listen(PORT,  () => console.log(`Server is running on port ${PORT}`));
 
